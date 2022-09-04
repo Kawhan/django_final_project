@@ -1,0 +1,12 @@
+.text-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    margin-top: 1.5%;
+}
+
+.linha-name-jogador {
+    display: inline;
+}

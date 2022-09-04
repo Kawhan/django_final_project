@@ -1,0 +1,113 @@
+/* .text-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    margin-top: 1.5%;
+}
+
+.linha-name-jogador {
+    display: grid;
+    
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: raça; }
+.item6 { grid-area: classe; }
+.item7 { grid-area: nivel; }
+.item8 { grid-area: historia; }
+.item9 { grid-area: atributos; }
+.item10 { grid-area: ptvida; }
+.item11 { grid-area: habilidades; }
+.item12 { grid-area: equipamentos; }
+.item13 { grid-area: idade; }
+.item14 { grid-area: Missões; }
+.item15 { grid-area: Conquistas; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header header'
+    'menu menu main main right right idade'
+    'menu menu raça raça classe classe nivel'
+    'historia historia historia historia historia historia historia'
+    'atributos atributos atributos atributos ptvida ptvida ptvida'
+    'habilidades habilidades habilidades habilidades habilidades equipamentos equipamentos'
+    'Missões Missões Missões Missões Conquistas Conquistas Conquistas'
+    ;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+    border: 1px solid #4A89DC;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container > div.item3, div.item4,  div.item5, div.item6, div.item7, div.item13 {
+    text-align: left;
+    padding-left: 3px;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container > div.item8 > h1 {
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container > div.item8 > p {
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-left: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div > .forca, .velocidade, .defesa, .inteligencia, .carisma {
+    display: flex;
+    border: 1px solid #4A89DC;
+    border-radius: 7px;
+    margin-top: 3px;
+    padding: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div > .status {
+    display: inline-block !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+div > h2.life {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.grid-container > div.item11, div.item12, div.item14, div.item15 > p {
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+

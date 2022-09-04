@@ -1,0 +1,74 @@
+{% load static %}
+<div class="container">
+    <div class="grid-container">
+        <div class="item1">Ficha personagem</div>
+        <div class="item2">
+            <h6>Pontos de vida</h6>
+            <span>
+                {{ ficha.pontos_vida }}
+            </span>
+            <h6>Pontos de mana</h6>
+            <span>
+                {{ ficha.pontos_mana }}
+            </span>
+        </div>
+        <div class="item3">Nome personagem: {{ ficha.nome_personagem }}</div>  
+        <div class="item4">Jogador: {{ ficha.jogador }}</div>
+        <div class="item13">Idade: {{ ficha.idade}} anos </div>
+        <div class="item5">Raça: {{ ficha.raça }}</div>
+        <div class="item6">Classe: {{ ficha.classe }}</div>
+        <div class="item7">Nível: {{ ficha.level }}</div>
+        <div class="item8">
+            <h1>Historia</h1>
+            <p>{{ ficha.historia }}</p>
+        </div>
+        <div class="item9">
+            <h1>Atributos</h1>
+            <div class="status">
+                <div class="forca">Força: {{ ficha.força }}</div>
+                <div class="velocidade">
+                    Velocidade: {{ ficha.velocidade }} 
+                </div>
+                <div class="defesa">Defesa: {{ ficha.defesa }}</div>
+                <div class="inteligencia">Inteligência: {{ ficha.inteligencia }}</div>
+                <div class="carisma">Carisma: {{ ficha.carisma }}</div>
+            </div>
+            <div class="status">
+                <div class="forca">Bônus: {{ ficha.bonus_força }}</div>
+                <div class="velocidade">
+                    Bônus: {{ ficha.bonus_velocidade }} 
+                </div>
+                <div class="defesa">Bônus: {{ ficha.bonus_defesa }}</div>
+                <div class="inteligencia">Bônus: {{ ficha.bonus_inteligencia }}</div>
+                <div class="carisma">Bônus: {{ ficha.bonus_carisma }}</div>
+            </div>
+        </div>
+        <div class="item10">
+            <img src="{% static 'img/card.jpg' %}" alt="">
+        </div>
+        <div class="item11">
+            <h1>Habilidades</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis ultrices magna et aliquam. Nullam non nulla scelerisque, pharetra nunc ut, hendrerit dui. Etiam eleifend venenatis congue. Maecenas ut iaculis tellus. Aliquam accumsan dolor tempor mauris molestie, a efficitur sapien convallis. Nam volutpat purus imperdiet, blandit orci vel, rhoncus lacus. Nulla facilisis dignissim nulla in iaculis. Ut feugiat est sed nisl iaculis, id imperdiet massa porta. Quisque ultrices imperdiet felis, sit amet fringilla ex gravida id. Cras hendrerit felis at rhoncus malesuada. Nulla volutpat risus magna, eget consectetur tortor gravida nec. Sed eget ex et ligula rutrum gravida. Aenean non velit scelerisque, tincidunt nunc sit amet, aliquet neque. Aenean hendrerit dignissim molestie. Nulla tristique interdum sapien, a porta tortor ultrices id.
+            </p>
+        </div>
+        <div class="item12">
+            <h1>Equipamentos</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis ultrices magna et aliquam. Nullam non nulla scelerisque, pharetra nunc ut, hendrerit dui. Etiam eleifend venenatis congue. Maecenas ut iaculis tellus. Aliquam accumsan dolor tempor mauris molestie, a efficitur sapien convallis. Nam volutpat purus imperdiet, blandit orci vel, rhoncus lacus. Nulla facilisis dignissim nulla in iaculis. Ut feugiat est sed nisl iaculis, id imperdiet massa porta. Quisque ultrices imperdiet felis, sit amet fringilla ex gravida id. Cras hendrerit felis at rhoncus malesuada. Nulla volutpat risus magna, eget consectetur tortor gravida nec. Sed eget ex et ligula rutrum gravida. Aenean non velit scelerisque, tincidunt nunc sit amet, aliquet neque. Aenean hendrerit dignissim molestie. Nulla tristique interdum sapien, a porta tortor ultrices id.
+            </p>
+        </div>
+        <div class="item14">
+            <h1>Missões</h1>
+            <p>
+                {{ ficha.missoes }}
+            </p>
+        </div>
+        <div class="item15">
+            <h1>Conquistas</h1>
+            <p>
+                {{ ficha.conquistas }}
+            </p>
+        </div>
+    </div>
+</div>

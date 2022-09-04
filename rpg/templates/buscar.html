@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if fichas %}
+        
+        <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="row">
+                            {% for ficha in fichas %}
+                                <div class="card" style="width: 18rem; margin-left: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                        {% if ficha.foto_personagem == "" %}
+                                            <img class="card-img-top" src="{% static 'img/card.jpg' %}" alt="Card image cap">
+                                        {% else %}
+                                            <img class="card-img-top" src="{{ ficha.foto_personagem.url }}" alt="Card image cap">
+                                        {% endif %}
+                                        <div class="card-body">
+                                        <h5 class="card-title">{{ficha.nome_personagem}}</h5>
+                                        <p class="card-text">Ficha de RPG Jogador: {{ ficha.jogador }}</p>
+                                        {% if user.is_superuser %}
+                                        <a href="{% url 'change_ficha' ficha.id %}" class="btn btn-dark"> Editar</a>
+                                        <a href="{% url 'fichas_delete' ficha.id %}" class="btn btn-dark"> Apagar</a>
+                                        {% else %}
+                                        {% endif %}
+                                        <a href="{% url 'fichas_view' ficha.id %}" class="btn btn-dark ">Info</a>
+                                        </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>  
+        </div>
+    {% else %}
+    {% endif%}
+{% endblock %}

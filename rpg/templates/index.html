@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if messages %}
+    {% for m in messages %}
+        <div class="alert alert-warning" role="alert">
+        {{ m }}
+        </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container mt-3">
+        <h3>Bem vindo ao sistema</h3>
+        <p>Ainda estamos em fase de desenvolvimento RPG IS LIFE.</p>
+    </div>
+{% endblock %}
